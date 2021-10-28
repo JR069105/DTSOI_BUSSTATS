@@ -47,6 +47,6 @@ def web_gen():
             for i in full_buses:
                if re.search(r"bus # (([0-9]|/)*)", i.lower())[0].split(" ")[2] not in seen_buses:
                 p(i)
-    with open(path.join(folder,"Bus_File.html"),"w") as File:
+    with open(path.join(folder,"public/index.html"),"w") as File:
         File.write(doc.render())
 web_gen()
