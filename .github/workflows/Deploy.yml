@@ -28,6 +28,7 @@ jobs:
         with:
           # Version range or exact version of a Python version to use, using SemVer's version range syntax.
             python-version: 3.9
+      - run: pip install -r requirements.txt
       - run: python Scraper.py
       - name: publishment
         uses: peaceiris/actions-gh-pages@v3
