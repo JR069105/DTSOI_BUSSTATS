@@ -11,7 +11,7 @@ def get_buses():
     soup=BeautifulSoup(dtsoitext,"html.parser")
     posts=soup.find_all("div",class_="status")
     bus_post = [i.get_text() for i in posts if "buses" in i.get_text() and "run" in i.get_text()][0]
-    busnums = re.findall(r"bus # (([0-9]|/)*)", bus_post.lower())
+    busnums = re.findall(r"# *(([0-9]|/)*)", bus_post.lower())
     busnums = [i[0] for i in busnums]
     #print("\033[36mThe following busses from DTSOI are not running Today: ",busnums)
     full_busnums = bus_post.split("\n")[1:]
@@ -45,8 +45,12 @@ def web_gen():
             hr(_class = "line")
             p("These buses are also not running:",_class = "subtitle")
             for i in full_buses:
-               if re.search(r"bus # (([0-9]|/)*)", i.lower())[0].split(" ")[2] not in seen_buses:
-                p(i)
+                seen = False
+                for seenbus in seen_buses:
+                    if seenbus in i:
+                        seen = True
+                if seen == False:
+                    p(i)
     with open(path.join(folder,"public/index.html"),"w") as File:
         File.write(doc.render())
 web_gen()
