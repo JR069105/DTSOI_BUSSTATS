@@ -27,6 +27,8 @@ def web_gen():
         link(rel='stylesheet',href='index.css')
         link(href='https://fonts.googleapis.com/css?family=Comfortaa', rel='stylesheet')
         meta(name="viewport", content="width=device-width, intitial-scale=1")
+        link(rel="icon", type="image/png", href="favicon-32x32.png", sizes="32x32")
+        link(rel="icon", type="image/png", href="favicon-16x16.png", sizes="16x16")
     with doc:
         with div():
             h1("DTSOI Buses Status", _class = "title")
