@@ -38,7 +38,7 @@ def web_gen():
             p("Last Updated: ",(datetime.now(pytz.timezone("America/Chicago")).strftime("%a %b %d %I:%M %p, %Y ")),_class = "subtitle")
             for school in allb.keys():
                 p("|")
-                p(school,_class = "school")
+                p(school,_class = "subtitle")
                 for bus in allb[school]:
                     if bus in busnums[0]:
                         p(f"Bus #{bus} is not running")
