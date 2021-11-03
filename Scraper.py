@@ -31,6 +31,8 @@ def web_gen():
         link(rel="icon", type="image/png", href="favicon-16x16.png", sizes="16x16")
     with doc:
         with div():
+            img(src="pic_trulli.jpg", class="timage")
+        with div():
             h1("DTSOI Buses Status", _class = "title")
             hr(_class = "line")
             p("Last Updated: ",(datetime.now(pytz.timezone("America/Chicago")).strftime("%a %b %d %I:%M %p, %Y ")),_class = "subtitle")
