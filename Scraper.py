@@ -31,7 +31,7 @@ def web_gen():
         link(rel="icon", type="image/png", href="favicon-16x16.png", sizes="16x16")
     with doc:
         with div():
-            img(src="pic_trulli.jpg", _class="timage")
+            img(src="SOIBus.png", _class="timage")
         with div():
             h1("DTSOI Buses Status", _class = "title")
             hr(_class = "line")
