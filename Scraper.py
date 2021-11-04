@@ -33,7 +33,7 @@ def web_gen():
         with div():
             img(src="SOIBus.png", _class="timage")
         with div():
-            h1("DTSOI Buses Status", _class = "title")
+            h1("DTSOI Bus Status", _class = "title")
             hr(_class = "line")
             p("Last Updated: ",(datetime.now(pytz.timezone("America/Chicago")).strftime("%a %b %d %I:%M %p, %Y ")),_class = "subtitle")
             for school in allb.keys():
