@@ -5,13 +5,12 @@ body{
 .title{
     color:white;   
     text-shadow: 0 0 3px black, 0 0 5px black;
-    font-size:5vw;
+    font-size:3em;
     text-align:center;
     }
 div{
     text-align:center;
     color: white;
-    font-size:2vw;
     text-shadow: 0 0 2px black, 0 0 2px black;
     }
 .line{
@@ -23,10 +22,13 @@ div{
     margin-left:20vw;
     }
 .subtitle{
-    font-size:2em;
+    font-size:1.5em;
     }
    p{
-color:white; 
-font-size:1.5em    
+    color:white; 
+    font-size:1em    
     }
-
+.timage{
+    width: 4em;
+    height: 4em;
+    }
