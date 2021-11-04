@@ -41,7 +41,7 @@ def web_gen():
                 p(school,_class = "subtitle")
                 for bus in allb[school]:
                     if bus in busnums[0]:
-                        p(mark(f"Bus #{bus} is not running"))
+                        p(mark(f"Bus #{bus} is not running"), _class = "hiyell")
                         seen_buses.append(bus)
                     else:
                         p(f"Bus #{bus} is running")
