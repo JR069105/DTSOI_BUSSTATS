@@ -4,19 +4,19 @@ body{
     }
 .title{
     color:white;   
-    text-shadow: 0 0 3px black, 0 0 5px black;
+    text-shadow: 0 0 .2em black;
     font-size:3.5em;
     text-align:center;
     }
 div{
     text-align:center;
     color: white;
-    text-shadow: 0 0 2px black, 0 0 2px black;
+    text-shadow: 0 0 .15em black;
     }
 .line{
     background-color:black;
     border: solid black;
-    height:.1vw;
+    height:.075em;
     border-width:.05vw;
     margin-right:20vw;
     margin-left:20vw;
