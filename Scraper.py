@@ -32,8 +32,10 @@ def web_gen():
         link(rel='stylesheet',href='index.css')
         link(href='https://fonts.googleapis.com/css?family=Comfortaa', rel='stylesheet')
         meta(name="viewport", content="width=device-width, intitial-scale=1")
-        link(rel="icon", type="image/png", href="favicon-32x32.png", sizes="32x32")
-        link(rel="icon", type="image/png", href="favicon-16x16.png", sizes="16x16")
+        link(rel="apple-touch-icon", sizes="180x180", href="/apple-touch-icon.png")
+        link(rel="icon", type="image/png", sizes="32x32", href="/favicon-32x32.png")
+        link(rel="icon", type="image/png", sizes="16x16", href="/favicon-16x16.png")
+        link(rel="manifest", href="/site.webmanifest")       
     with doc:
         with div():
             img(src="SOIBus.png", _class="timage")
@@ -52,7 +54,7 @@ def web_gen():
                         p(f"Bus #{bus} is running")
         with div():
             hr(_class = "line")
-            p("These buses are also not running:",_class = "subtitle")
+            p(mark("These buses are also not running:"), _class = "subtitle", _class = "hiyell")
             for i in full_buses:
                 seen = False
                 for seenbus in seen_buses:
