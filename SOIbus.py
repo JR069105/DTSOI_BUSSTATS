@@ -5,6 +5,7 @@ from os import path
 from datetime import datetime
 folder = path.dirname(path.realpath(__file__))
 allb = {"George": ["148","155","188"], "Lakeside": ["133","139","208"], "Southwest": ["169","157"], "Central": ["196","189","197"]}
+numobus=0
 def get_buses():
     dtsoitext=requests.get("https://www.sdale.org/o/don-tyson-school-of-innovation/live-feed").text
 
@@ -43,6 +44,11 @@ def web_gen():
             h1("DTSOI Bus Status", _class = "title")
             hr(_class = "line")
             p("Last Updated: ",(datetime.now(pytz.timezone("America/Chicago")).strftime("%a %b %d %I:%M %p, %Y ")),_class = "subtitle")
+            for i in busnums:
+                numobus+=1
+            if numobus == 0:
+                p("|")
+                p(mark("All buses are running at this time"), _class="subtitle hiyell")
             for school in allb.keys():
                 p("|")
                 p(school,_class = "subtitle")
