@@ -5,7 +5,6 @@ from os import path
 from datetime import datetime
 folder = path.dirname(path.realpath(__file__))
 allb = {"George": ["148","155","188"], "Lakeside": ["133","139","208"], "Southwest": ["169","157"], "Central": ["196","189","197"]}
-numobus=0
 def get_buses():
     dtsoitext=requests.get("https://www.sdale.org/o/don-tyson-school-of-innovation/live-feed").text
 
@@ -28,6 +27,7 @@ def web_gen():
     busnums= get_buses()
     seen_buses = []
     full_buses = busnums[1]
+    numobus=0
     doc = dominate.document(title="DTSOI bus post status")
     with doc.head:
         link(rel='stylesheet',href='index.css')
