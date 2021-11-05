@@ -54,7 +54,7 @@ def web_gen():
                         p(f"Bus #{bus} is running")
         with div():
             hr(_class = "line")
-            p(mark("These buses are also not running:"), _class = "subtitle", _class = "hiyell")
+            p(mark("These buses are also not running:"), _class = "subtitle hiyell")
             for i in full_buses:
                 seen = False
                 for seenbus in seen_buses:
