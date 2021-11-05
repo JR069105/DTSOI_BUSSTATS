@@ -44,7 +44,7 @@ def web_gen():
             h1("DTSOI Bus Status", _class = "title")
             hr(_class = "line")
             p("Last Updated: ",(datetime.now(pytz.timezone("America/Chicago")).strftime("%a %b %d %I:%M %p, %Y ")),_class = "subtitle")
-            for i in busnums:
+            for i in full_busnums:
                 numobus+=1
             if numobus == 0:
                 p("|")
