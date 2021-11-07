@@ -59,8 +59,13 @@ def web_gen():
                     else:
                         p(f"Bus #{bus} is running")
         with div():
-            hr(_class = "line")
-            p(mark("These buses are also not running:"), _class = "subtitle hiyell")
+            doextrabus = False
+            for extrabus in full_buses:
+                if extrabus not in seen_buses:
+                    doextrabus = True
+            if doextrabus == True:             
+                hr(_class = "line")
+                p(mark("These buses are also not running:"), _class = "subtitle hiyell")
             for i in full_buses:
                 seen = False
                 for seenbus in seen_buses:
