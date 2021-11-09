@@ -14,7 +14,7 @@ def get_buses():
     busnums = []
     for post in posts:
         timeAgo = post.find_next("div", class_="date-author").get_text().replace("about", "").strip()
-        if ("hour" in timeAgo or "minute" in timeAgo) and ("hour" not in timeAgo or int(timeAgo.split(" ")[0]) <= 15) and ("bus" in post.get_text() and "run" in post.get_text()):
+        if ("hour" in timeAgo or "minute" in timeAgo) and ("hour" not in timeAgo or int(timeAgo.split(" ")[0]) <= 15) and ("bus" in (post.get_text()).lower() and "run" in (post.get_text()).lower()):
             bus_post = post.get_text()
             localBusnums = re.findall(r"#* *(([0-9]|/)*)", bus_post.lower())
             busnums += [i[0] for i in localBusnums if len(i[0]) > 0]
