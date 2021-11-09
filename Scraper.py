@@ -28,7 +28,7 @@ def web_gen():
     seen_buses = []
     full_buses = busnums[1]
     numobus=0
-    doc = dominate.document(title="DTSOI bus post status")
+    doc = dominate.document(title="DTSOI Bus Status")
     with doc.head:
         link(rel='stylesheet',href='index.css')
         link(href='https://fonts.googleapis.com/css?family=Comfortaa', rel='stylesheet')
